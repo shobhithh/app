@@ -1,0 +1,20 @@
+#headtick {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 1135px;
+}
+
+#sales {
+    margin-left: 1300px;
+    margin-top: -50px;
+    font-weight: 600;
+}
+
+#circle {
+    margin-left: 1250px;
+    margin-top: -50px;
+}
+
+* {
+    color: #00303f;
+}

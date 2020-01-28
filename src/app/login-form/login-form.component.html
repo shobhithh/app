@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+
+
+
+
+<div class="container">
+    <div class="col-md-8 offset-md-2">
+        <header class="form-header text-center">
+            <img src="./assets/laptop.png">
+        </header>
+        <div class="container" style="background-color: #DEEDF9; margin-top:-93px;border-radius:10px ;">
+            <div class="">
+
+                <form>
+                    <fieldset>
+                        <legend class="text-center ml-3 mr-3" style="
+                            padding-top: 104px">
+                            <h5><b>LOGIN</b></h5>
+                        </legend>
+                        <div class="form-group ml-3 mr-3">
+
+                            <label>Username or Email ID</label>
+                            <input type="text" class="form-control ">
+                        </div>
+                        <div class="form-group ml-3 mr-3">
+                            <label>Password</label>
+                            <input type="password" class="form-control ">
+                        </div>
+
+                        <div class="form-check form-group ml-4 mr-4 col-xs-12">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">&nbsp;
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+
+
+                            <div class="float-right ml-2 col-xs-12">
+                                <a routerLink="/forgot">
+                                    <p><u>Forgot your Password?</u></p>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success mb-3" (click)="goToRegister('ticketrequest')">LOGIN</button><br>
+                            <button type="submit" class="btn btn-primary mb-4" (click)="goToRegister('register')">Register Now</button>
+
+                        </div>
+
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

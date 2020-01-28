@@ -1,0 +1,30 @@
+.custom-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#btn {
+    text-align: center;
+    height: 31px;
+    padding: 0;
+    border-radius: 7.5px;
+    border: none;
+}
+
+#dottedline {
+    border-top: 2px dashed #d6d6d6;
+}
+
+.btn-color {
+    background-color: #f2f8fc;
+    border: 1px solid black;
+}
+
+.margin {
+    margin-top: 20px;
+}
+
+* {
+    color: #00303f;
+}

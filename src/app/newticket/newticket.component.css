@@ -1,0 +1,11 @@
+* {
+    color: #00303f;
+}
+
+button {
+    height: 35px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    float: right;
+}
