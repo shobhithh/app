@@ -6,10 +6,10 @@
         <header class="form-header text-center">
             <img src="./assets/laptop.png" alt="logo">
         </header>
-        <div class="container" style="background-color:#DEEDF9; margin-top:-143px;">
+        <div class="container" id="con">
             <div class="px-4">
                 <form>
-                    <h4 class="text-center mt-5 mb-4" style="padding-top: 100px;"><b>Organization Ticket Issue</b></h4>
+                    <h4 class="text-center mt-5 mb-4"><b>Organization Ticket Issue</b></h4>
                     <fieldset class="bg-white scheduler-border">
                         <legend class="scheduler-border"><b>Ticket Information</b></legend>
                         <div class="col-md-12">
@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <h5 class="float"><b>Priority</b></h5><span class="gap"> &nbsp;:</span>
-                                    <span class="textsize"><button class="btn bg-danger">High</button></span>
+                                    <span class="textsize"><button id="higbg">High</button></span>
                                 </div>
                                 <div class="col-md-6">
                                     <h5 class="float"><b>Status</b></h5><span class="gap">&nbsp;:</span>
@@ -51,24 +51,24 @@
                     <h5 class="float ml-3"><b class="text-white">Comment</b></h5>
                 </button>
                 <div class="row py-3">
-                    <div class="col-md-2" style="padding-left: 30px;">
+                    <div class="col-md-2" id="info">
                         <h1> &nbsp;<i class="fas fa-user-circle"></i></h1>
                         <h6>Namita</h6>
                     </div>
 
-                    <div class="col-md-10 bg-white arrow-left" style="margin-left: -30px;">
+                    <div class="col-md-10 bg-white arrow-left" id="btncolor">
                         <h5> I'm getting these warnings, too, but the applica&on seems to work.Does this have any effect on the date conversions?
                         </h5>
                         <h6 class="float-right">Namita added a comment - 08/Nov/10 8:50 AM</h6>
                     </div>
                 </div>
                 <div class="row py-3">
-                    <div class="col-md-2" style="padding-left: 30px;">
+                    <div class="col-md-2" id="btncolor">
                         <h1> &nbsp;<i class="fas fa-user-circle"></i></h1>
                         <h6>Pavan K</h6>
                     </div>
 
-                    <div class="col-md-10 bg-white arrow-left" style="margin-left: -30px;">
+                    <div class="col-md-10 bg-white arrow-left" id="btncolor">
                         <h5>Spring Data commons registers the java.&me converters by default for quite some &me now and considers them simple types that can be handled by the store itself.</h5>
                         <h6 class="float-right">Pavan K added a comment - 08/Nov/10 8:50 AM</h6>
                     </div>
@@ -78,7 +78,7 @@
                         <h1> &nbsp;<i class="fas fa-user-circle"></i></h1>
                         <h6>Navya</h6>
                     </div>
-                    <div class="col-md-10 bg-white arrow-left" style="margin-left: -30px;">
+                    <div class="col-md-10 bg-white arrow-left" id="btncolor">
                         <h5>
                             Spring Data MongoDB, which we fixed there with the last release. As a side effect, the warnings now appear again.
                         </h5>

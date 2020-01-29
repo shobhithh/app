@@ -60,6 +60,10 @@ legend.scheduler-border {
     height: 500px;
 }
 
+h4 {
+    padding-top: 100px;
+}
+
 #btncol {
     background-color: #00303f;
 }
@@ -85,4 +89,17 @@ legend.scheduler-border {
 
 div {
     border-radius: 3%;
+}
+
+#higbg {
+    background-color: #AF473C;
+}
+
+#con {
+    background-color: #DEEDF9;
+    margin-top: -143px
+}
+
+#info {
+    padding-left: 30px;
 }

@@ -16,9 +16,9 @@
     { "problem": "Application is not loading ", "module": "Server", "priority": "Low", "status": "Closed" },
     { "problem": "Application is not loading ", "module": "Server", "priority": "Low", "status": "In progress" },
     { "problem": "Application is not loading ", "module": "Server", "priority": "Low", "status": "Assigned" },
-    { "problem": "Application is not loading ", "module": "Server", "priority": "Low", "status": "Closed" },
-    { "problem": "Application is not loading ", "module": "Server", "priority": "Low", "status": "Open" },
-    { "problem": "Application is not loading ", "module": "Server", "priority": "Low", "status": "closed" }
+    { "problem": "Application is not loading ", "module": "Application", "priority": "High", "status": "Closed" },
+    { "problem": "Can't login to application ", "module": "Server", "priority": "Low", "status": "Open" },
+    { "problem": "Can't access VPN ", "module": "Application", "priority": "Low", "status": "Closed" }
 
 
 ]

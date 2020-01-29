@@ -18,3 +18,21 @@
 * {
     color: #00303f;
 }
+
+@media screen and (max-width: 1000px) {
+    h5 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+        margin-left: 100px;
+    }
+}
+
+#head {
+    background-color: #F2F8FC;
+}
+
+#ti {
+    margin-left: -100px
+}

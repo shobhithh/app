@@ -5,56 +5,81 @@
 
 
         <header class="form-header text-center">
-            <img src="./assets/laptop.png" height=75px width=75px style="margin-top:30px">
+            <img src="./assets/laptop.png" height=75px width=75px>
         </header>
 
-        <div class="container" style="background-color: #DEEDF9; margin-top:-42px border-radius:10px ;">
+        <div class="container" id="con">
             <div class="">
-
-                <form>
+                <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
                     <fieldset>
-                        <legend class="text-center ml-3 mr-3" style="
-                            padding-top: 55px">
+                        <legend class=" text-center ml-3 mr-3 " id="le">
                             <h5><b>Register New User</b></h5>
                         </legend>
-                        <div class="form-group ml-3 mr-3">
-                            <label>First Name</label><span class="text-danger">&nbsp;*</span>
-                            <input type="text" class="form-control ">
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>First Name</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="text" class="form-control" formControlName="firstname" [ngClass]="{ 'is-invalid':submitted} " #firstname>
+                            <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched) ">
+                                <span class="text-danger " *ngIf="firstname.errors.required ">First name is required</span>
+                            </div>
+
                         </div>
-                        <div class="form-group ml-3 mr-3">
-                            <label>Lat Name</label><span class="text-danger">&nbsp;*</span>
-                            <input type="text" class="form-control ">
+
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>Lat Name</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="text " class="form-control " formControlName="lastname" [ngClass]="{ 'is-invalid':submitted} " #lastname>
+                            <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched) ">
+                                <span class="text-danger " *ngIf="lastname.errors.required ">Last name is required</span>
+                            </div>
                         </div>
-                        <div class="form-group ml-3 mr-3">
-                            <label>User Name</label><span class="text-danger">&nbsp;*</span>
-                            <input type="text" class="form-control ">
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>User Name</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="text " class="form-control " formControlName="username" [ngClass]="{ 'is-invalid':submitted} " #username>
+                            <div *ngIf="username.invalid && (username.dirty || username.touched) ">
+                                <span class="text-danger " *ngIf="username.errors.required ">Username is required</span>
+                            </div>
                         </div>
-                        <div class="form-group ml-3 mr-3">
-                            <label>Email Id</label><span class="text-danger">&nbsp;*</span>
-                            <input type="email" class="form-control ">
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>Email Id</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="text " class="form-control " formControlName="email" [ngClass]="{ 'is-invalid':submitted} ">
+                            <div *ngIf="email.invalid && (email.dirty || email.touched) ">
+                                <span class="text-danger " *ngIf="email.errors.required ">Email is required</span>
+                                <span class="text-danger " *ngIf="email.errors.email ">Email is required</span>
+                            </div>
                         </div>
-                        <div class="form-group ml-3 mr-3">
-                            <label>Organization Name</label><span class="text-danger">&nbsp;*</span>
-                            <input type="text" class="form-control ">
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>Organization Name</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="text " class="form-control " formControlName="orgname" [ngClass]="{ 'is-invalid':submitted} ">
+                            <div *ngIf="orgname.invalid && (orgname.dirty || orgname.touched) ">
+                                <span class="text-danger " *ngIf="orgname.errors.required ">Organization name is required</span>
+                            </div>
                         </div>
-                        <div class="form-group ml-3 mr-3">
-                            <label>Password</label><span class="text-danger">&nbsp;*</span>
-                            <input type="password" class="form-control ">
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>Password</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="password" class="form-control " formControlName="pass" [ngClass]="{ 'is-invalid':submitted} " #password>
+                            <div *ngIf="pass.invalid && (pass.dirty || pass.touched) ">
+                                <span class="text-danger " *ngIf="pass.errors.required ">Password is Required</span>
+                                <span class="text-danger" *ngIf="pass.errors.minlength">Password should be atleast 5 character length</span>
+                            </div>
                         </div>
-                        <div class="form-group ml-3 mr-3">
-                            <label>Confirm Password</label><span class="text-danger">&nbsp;*</span>
-                            <input type="password" class="form-control ">
+                        <div class="form-group ml-3 mr-3 ">
+                            <label>Confirm Password</label><span class="text-danger ">&nbsp;*</span>
+                            <input type="password" class="form-control " formControlName="confpass" [ngClass]="{ 'is-invalid':submitted} ">
+                            <div *ngIf="confpass.invalid && (confpass.dirty || confpass.touched) ">
+                                <span class="text-danger " *ngIf="confpass.errors.required">Password Needs to be confirmed</span>
+                                <span class="text-danger " *ngIf="confpass.errors.mustMatch">Password should be same</span>
+
+
+                            </div>
                         </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary mb-3" (click)="goToRegister('ticketrequest')">Register Now</button>
+                        <div class="text-center ">
+                            <button type="submit " class="btn btn-primary mb-3 " (click)="goToRegister( 'ticketrequest')" [disabled]="regForm.invalid" (click)="submit(username,password)">Register Now</button>
                         </div>
 
                     </fieldset>
-
-
                 </form>
+
+
 
             </div>
         </div>
     </div>
-</div>

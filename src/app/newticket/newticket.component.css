@@ -9,3 +9,13 @@ button {
     border: none;
     float: right;
 }
+
+#con {
+    background-color: #DEEDF9;
+    margin-top: -110px;
+    border-radius: 10px
+}
+
+#ti {
+    padding-top: 100px
+}

@@ -1,31 +1,34 @@
 <app-header></app-header>
-
-
-
-
-
 <div class="container">
     <div class="col-md-8 offset-md-2">
         <header class="form-header text-center">
             <img src="./assets/laptop.png">
         </header>
-        <div class="container" style="background-color: #DEEDF9; margin-top:-93px;border-radius:10px ;">
+        <div class="container" id="con">
             <div class="">
 
-                <form>
+                <form [formGroup]="logForm" (ngSubmit)="onSubmit()">
                     <fieldset>
-                        <legend class="text-center ml-3 mr-3" style="
-                            padding-top: 104px">
+                        <legend class="text-center ml-3 mr-3" id="legend">
                             <h5><b>LOGIN</b></h5>
                         </legend>
                         <div class="form-group ml-3 mr-3">
 
                             <label>Username or Email ID</label>
-                            <input type="text" class="form-control ">
+                            <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted}">
+                            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                                <span class="text-danger" *ngIf="email.errors.required">Email / Username is required</span>
+                            </div>
+
                         </div>
                         <div class="form-group ml-3 mr-3">
                             <label>Password</label>
-                            <input type="password" class="form-control ">
+                            <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted}">
+                            <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                                <span class="text-danger" *ngIf="password.errors.required">Password is required</span>
+                                <span class="text-danger" *ngIf="password.errors.minlength">Password should be atleast 5 character length</span>
+                            </div>
+
                         </div>
 
                         <div class="form-check form-group ml-4 mr-4 col-xs-12">
@@ -41,7 +44,7 @@
                             </div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-success mb-3" (click)="goToRegister('ticketrequest')">LOGIN</button><br>
+                            <button type="submit" class="btn btn-success mb-3" (click)="goToRegister('ticketrequest')" [disabled]="logForm.invalid" (click)="checkvalid(email.value,password.value)">LOGIN</button><br>
                             <button type="submit" class="btn btn-primary mb-4" (click)="goToRegister('register')">Register Now</button>
 
                         </div>

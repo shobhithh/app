@@ -24,3 +24,13 @@
     img {
         margin-top: 100px;
     }
+    
+    #con {
+        background-color: #DEEDF9;
+        margin-top: -93px;
+        border-radius: 10px;
+    }
+    
+    #legend {
+        padding-top: 104px
+    }

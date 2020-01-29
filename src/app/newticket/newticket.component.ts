@@ -13,5 +13,9 @@ export class NewticketComponent implements OnInit {
 
   ngOnInit() {
   }
+  submit(problem)
+  {
+    console.log(problem)
+  }
 
 }
